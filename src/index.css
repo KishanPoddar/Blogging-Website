@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lora:ital,wght@1,400;1,500;1,600&family=Varela&family=Varela+Round&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.name-heading{
+    @apply m-3 p-1 border-y-2 border-drak-gray w-4/5 font-varela-round text-lg font-semibold text-center text-gray-600;
+}
