@@ -4,7 +4,7 @@ import { BsFacebook, BsTwitter, BsInstagram, BsPinterest, BsSearch } from 'react
 const Navbar = () => {
   return (
     <>
-        <div className='w-full h-14 top-0 pt-2 sticky flex items-center font-josefin-sans'>
+        <div className='w-full h-14 top-0 pt-2 bg-white sticky flex items-center font-josefin-sans z-[999]'>
             <div className='basis-1/4  flex justify-center gap-4 text-2xl text-tundora cursor-pointer'>
                 <BsFacebook/>
                 <BsPinterest/>

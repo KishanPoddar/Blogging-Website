@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'loginPageBG': "url('/assets/loginPage.jpg')",
+      },
       fontFamily: {
         'josefin-sans': ['Josefin Sans', 'sans-serif'],
         'lora': ['Lora', 'serif'],
@@ -15,7 +18,9 @@ module.exports = {
       colors: {
         'tundora': '#444',
         'dove-gray': '#666',
-        'drak-gray': '#a7a4a4'
+        'drak-gray': '#a7a4a4',
+        'be9656': '#be9656',
+        'lightcoral': '#f08080 ',
       },
     },
   },

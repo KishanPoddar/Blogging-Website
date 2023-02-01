@@ -6,3 +6,35 @@
 .name-heading{
     @apply m-3 p-1 border-y-2 border-drak-gray w-4/5 font-varela-round text-lg font-semibold text-center text-gray-600;
 }
+.webkitCss{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.settingsLabel{
+    @apply text-xl mt-5 
+}
+
+.settingsInput{
+    @apply text-gray-500 my-3 h-7 border-none;
+    border-bottom: 1px solid lightgray;
+}
+
+.button{
+    @apply text-white bg-teal-600 py-2 px-3 rounded-lg cursor-pointer text-base;
+}
+
+.bgImageLogin{
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('/src/assets/flowerBackground.jpg');
+    background-size: cover;
+}
+
+.bgImageRegister{
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('/src/assets/keyboardBackground.jpg');
+    background-size: cover;
+}
+
+.loginRegisterInput{
+    @apply mb-3 p-3 bg-white border-none rounded-xl;
+}
