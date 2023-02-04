@@ -11,7 +11,7 @@ import Single from "./pages/Single";
 import Write from "./pages/Write";
 
 const App = () => {
-const user = false; 
+  const user = false; 
 
   const router = createBrowserRouter(
     createRoutesFromElements(

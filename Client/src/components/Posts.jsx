@@ -1,16 +1,17 @@
-import React from 'react'
-import Post from './Post'
+import React from "react";
+import Post from "./Post";
 
-const Posts = () => {
-  return (
-    <div className='basis-3/4 flex flex-wrap justify-center'>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-    </div>
-  ) 
-}
+const Posts = ({ posts }) => {
+    return (
+        <div className="basis-3/4 flex flex-wrap justify-center">
+            {posts?.map((p,i) => (
+              <Post key={i} post={p}  />
+            ))}
+            {/* <Post  /> */}
+            {/* <Post  /> */}
+            {/* <Post  /> */}
+        </div>
+    );
+};
 
-export default Posts
+export default Posts;
