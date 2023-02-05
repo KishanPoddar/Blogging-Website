@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 
 const Post = ({post}) => {
+  const PF = "http://localhost:5000/Images/"
   return (
     <div className='mx-5 my-10 w-2/5'>
-      {post.photo && (<img src={post.photo} alt="" className='h-80 w-full object-cover rounded-lg' />)}
+      {post.photo && (<img src={PF + post.photo} alt="" className='h-80 w-full object-cover rounded-lg' />)}
       <div className='flex flex-col items-center'>
         <div className='font-varela-round text-sm text-be9656 mt-2 gap-2 flex'>
           {post.categories.map((c)=>(

@@ -55,7 +55,6 @@ const Register = () => {
 
                 <button className=" mt-5 button">Sign Up</button>
             </form>
-            <button type="submit" className="absolute top-[4.5rem] right-8 button !bg-lightcoral"><Link to='/login'>Login</Link></button>
             {error && <span className='mt-2 text-xl text-red-600'>Something went wrong!</span>}
         </div>
   )

@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const multer = require("multer")
+const path = require("path")
 const cors = require("cors");
 const mongoose = require("mongoose");
 const authRoute = require("./Routes/auth")
@@ -12,6 +13,8 @@ const categoryRoute = require("./Routes/categories")
 dotenv.config();
 app.use(express.json())
 app.use(cors({credentials:true,origin:true}))
+app.use("/Images", express.static(path.join(__dirname,"Images")))
+
 
 
 mongoose.set('strictQuery', false);
