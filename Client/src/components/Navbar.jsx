@@ -6,6 +6,7 @@ import {
     BsPinterest,
     BsSearch
 } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
 import { Link, Outlet } from "react-router-dom";
 import { Context } from "../context/Context";
 
@@ -22,10 +23,18 @@ const Navbar = () => {
         <>
             <div className="w-full h-16 top-0 pt-2 bg-white sticky flex items-center font-josefin-sans z-[999]">
                 <div className="basis-1/4  flex justify-center gap-4 text-2xl text-tundora cursor-pointer">
-                    <a target="_blank" href="https://www.facebook.com/"><BsFacebook /></a>
-                    <a target="_blank" href="https://in.pinterest.com/"><BsPinterest /></a>
-                    <a target="_blank" href="https://twitter.com/"><BsTwitter /></a>
-                    <a target="_blank" href="https://www.instagram.com/"><BsInstagram /></a>
+                    <a target="_blank" href="https://www.facebook.com/">
+                        <BsFacebook />
+                    </a>
+                    <a target="_blank" href="https://in.pinterest.com/">
+                        <BsPinterest />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/">
+                        <BsTwitter />
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/">
+                        <BsInstagram />
+                    </a>
                 </div>
                 <div className="basis-1/2 ">
                     <ul className="flex justify-center gap-10 text-2xl font-light cursor-pointer">
@@ -44,11 +53,15 @@ const Navbar = () => {
                 <div className="basis-1/4  flex justify-center items-center gap-4 text-lg text-dove-gray">
                     {user ? (
                         <Link to="/settings">
-                            <img
-                                src={PF + user.profilePic}
-                                alt=""
-                                className="h-11 w-11 rounded-full cursor-pointer"
-                            />
+                            {user.profilePic ? (
+                                <img
+                                    src={PF + user.profilePic}
+                                    alt=""
+                                    className="h-11 w-11 rounded-full cursor-pointer"
+                                />
+                            ) : (
+                                <CgProfile className="w-7 h-7 font-light" />
+                            )}
                         </Link>
                     ) : (
                         <ul className="flex justify-center gap-10 text-2xl font-light cursor-pointer text-black">
@@ -60,7 +73,6 @@ const Navbar = () => {
                             </li>
                         </ul>
                     )}
-                    <BsSearch />
                 </div>
             </div>
             <div>

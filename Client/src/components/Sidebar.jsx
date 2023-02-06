@@ -34,8 +34,8 @@ const Sidebar = () => {
                 <span className="name-heading">CATEGORIES</span>
                 <ul className="my-2 w-9/12">
                     {cats.map((c,i)=>(
-                        <Link to={`/?cat=${c.name}`}>
-                            <li key={i} className="inline-block w-1/2 text-lg text-center cursor-pointer">{c.name}</li>
+                        <Link key={i} to={`/?cat=${c.name}`}>
+                            <li className="inline-block w-1/2 text-lg text-center cursor-pointer">{c.name}</li>
                         </Link>
 
                         ))}
@@ -44,10 +44,18 @@ const Sidebar = () => {
             <div className="w-10/12 flex flex-col items-center mt-2">
                 <span className="name-heading">FOLLOW US ON</span>
                 <div className="basis-1/4 my-5 flex justify-center gap-4 text-2xl text-tundora cursor-pointer">
-                    <BsFacebook />
-                    <BsPinterest />
-                    <BsTwitter />
-                    <BsInstagram />
+                <a target="_blank" href="https://www.facebook.com/">
+                        <BsFacebook />
+                    </a>
+                    <a target="_blank" href="https://in.pinterest.com/">
+                        <BsPinterest />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/">
+                        <BsTwitter />
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/">
+                        <BsInstagram />
+                    </a>
                 </div>
             </div>
         </div>

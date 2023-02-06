@@ -53,7 +53,7 @@ const Register = () => {
                 <label className="mt-2">Password</label>
                 <input onChange={validateInput} values={values.password} name="password" type="password" className="loginRegisterInput" placeholder="Enter your password..." />
 
-                <button className=" mt-5 button">Sign Up</button>
+                <button type="submit" className=" mt-5 button">Sign Up</button>
             </form>
             {error && <span className='mt-2 text-xl text-red-600'>Something went wrong!</span>}
         </div>

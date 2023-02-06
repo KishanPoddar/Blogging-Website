@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { BiUserCircle } from "react-icons/bi";
 import { Context } from "../context/Context";
 import axios from "redaxios";
+import { CgProfile } from "react-icons/cg";
 
 const Settings = () => {
     const [file, setFile] = useState(null);
@@ -68,24 +69,25 @@ const Settings = () => {
                     <span className="text-3xl mb-2 text-red-500">
                         Update Your Account
                     </span>
-                    <span className="text-red-600 cursor-pointer text-sm">
-                        Delete Account
-                    </span>
                 </div>
                 <form onSubmit={handleSubmit} className="flex flex-col">
                     <label className="settingsLabel">Profile Picture</label>
                     <div className="flex items-center my-3 gap-3">
-                        <img
-                            src={
-                                file
-                                    ? URL.createObjectURL(file)
-                                    : PF + user.profilePic
-                            }
-                            alt="Profile Picture"
-                            className="h-20 w-20 rounded-3xl object-cover"
-                        />
-                        <label className="settingsLabel" htmlFor="fileInput">
-                            <BiUserCircle className="h-7 w-7 p-0.5 rounded-full bg-pink-400 text-white" />
+                        {user.profilePic ? (
+                            <img
+                                src={
+                                    file
+                                        ? URL.createObjectURL(file)
+                                        : PF + user.profilePic
+                                }
+                                alt="Profile Picture"
+                                className="h-20 w-20 rounded-3xl object-cover"
+                            />
+                        ) : (
+                            <CgProfile className="h-14 w-14 p-3 rounded-2xl border-2 border-black" />
+                        )}
+                        <label className="settingsLabel !mt-0" htmlFor="fileInput">
+                            <BiUserCircle className="h-7 w-7 p-0.5 rounded-full bg-pink-400 text-white flex" />
                         </label>
                         <input
                             type="file"
