@@ -22,9 +22,9 @@ const Home = () => {
   return (
     <>
       <Header/>
-      <div className='flex'>
+      <div className=''>
         <Posts posts={posts} />
-        <Sidebar />
+        {/* <Sidebar /> */}
       </div>
     </>
   )

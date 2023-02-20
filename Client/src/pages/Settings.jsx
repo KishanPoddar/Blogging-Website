@@ -132,7 +132,7 @@ const Settings = () => {
                     )}
                 </form>
             </div>
-            <Sidebar />
+            {/* <Sidebar /> */}
         </div>
     );
 };

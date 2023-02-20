@@ -12,8 +12,8 @@ const categoryRoute = require("./Routes/categories")
 
 dotenv.config();
 app.use(express.json())
-app.use(cors({credentials:true,origin:true}))
-app.use("/Images", express.static(path.join(__dirname,"Images")))
+app.use(cors({ credentials: true, origin: true }))
+app.use("/Images", express.static(path.join(__dirname, "Images")))  
 
 
 
@@ -23,15 +23,15 @@ mongoose.connect(process.env.MONGO_URL, {
 
 
 const storage = multer.diskStorage({
-    destination:(req,file,cb)=>{
-        cb(null,"Images")
-    },filename:(req,file,cb)=>{
-        cb(null,req.body.name)
+    destination: (req, file, cb) => {
+        cb(null, "Images")
+    }, filename: (req, file, cb) => {
+        cb(null, req.body.name)
     },
 });
 
-const upload= multer({storage:storage})
-app.post("/api/upload", upload.single("file"),(req,res)=>{
+const upload = multer({ storage: storage })
+app.post("/api/upload", upload.single("file"), (req, res) => {
     res.status(200).json("file has been uploaded")
 })
 

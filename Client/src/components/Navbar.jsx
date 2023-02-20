@@ -4,7 +4,6 @@ import {
     BsTwitter,
     BsInstagram,
     BsPinterest,
-    BsSearch
 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { Link, Outlet } from "react-router-dom";
@@ -21,8 +20,8 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="w-full h-16 top-0 pt-2 bg-white sticky flex items-center font-josefin-sans z-[999]">
-                <div className="basis-1/4  flex justify-center gap-4 text-2xl text-tundora cursor-pointer">
+            <div className="w-full h-16 top-0 pt-2 bg-white sticky flex justify-center items-center font-josefin-sans z-[999]">
+                <div className="basis-1/4  lg:flex justify-center gap-4 text-2xl text-tundora cursor-pointer hidden">
                     <a target="_blank" href="https://www.facebook.com/">
                         <BsFacebook />
                     </a>
@@ -36,8 +35,8 @@ const Navbar = () => {
                         <BsInstagram />
                     </a>
                 </div>
-                <div className="basis-1/2 ">
-                    <ul className="flex justify-center gap-10 text-2xl font-light cursor-pointer">
+                <div className="lg:basis-1/2 block">
+                    <ul className="flex justify-center sm:gap-10 gap-4 sm:text-2xl text-base font-light cursor-pointer">
                         <li>
                             <Link to="/"> HOME</Link>
                         </li>
@@ -50,7 +49,7 @@ const Navbar = () => {
                         <li onClick={handleLogout}>{user && "LOGOUT"} </li>
                     </ul>
                 </div>
-                <div className="basis-1/4  flex justify-center items-center gap-4 text-lg text-dove-gray">
+                <div className="basis-1/4 lg:flex hidden justify-center items-center gap-4 text-lg text-dove-gray">
                     {user ? (
                         <Link to="/settings">
                             {user.profilePic ? (
