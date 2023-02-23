@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 const Post = ({post}) => {
-  const PF = "http://localhost:5000/Images/"
+  const PF = "/Images/"
   return (
     <div className='mx-5 my-10 w-2/5 border-2 border-gray-200 rounded-2xl shadow-lg shadow-gray-500/50'>
       <Link to={`/post/${post._id}`}>

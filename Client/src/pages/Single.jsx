@@ -6,7 +6,7 @@ const Single = () => {
   return (
     <div className='flex'>
         <SinglePost />
-        <Sidebar />
+        {/* <Sidebar /> */}
     </div>
   )
 }

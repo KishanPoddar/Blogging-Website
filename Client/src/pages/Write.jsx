@@ -23,12 +23,12 @@ const Write = () => {
             data.append("file", file);
             newPost.photo = filename;
             try {
-                await axios.post("http://localhost:5000/api/upload", data);
+                await axios.post("/api/upload", data);
             } catch (error) {}
         }
         try {
             const res = await axios.post(
-                "http://localhost:5000/api/posts",
+                "/api/posts",
                 newPost
             );
             window.location.replace("/post/" + res.data._id);

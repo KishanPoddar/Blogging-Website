@@ -15,7 +15,7 @@ const Settings = () => {
     });
 
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/Images/";
+    const PF = "/Images/";
 
     const validateInput = (e) => {
         setValues({
@@ -47,12 +47,12 @@ const Settings = () => {
             data.append("file", file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post("http://localhost:5000/api/upload", data);
+                await axios.post("/api/upload", data);
             } catch (error) {}
         }
         try {
             const res = await axios.put(
-                "http://localhost:5000/api/users/" + user._id,
+                "/api/users/" + user._id,
                 updatedUser
             );
             setSuccess(true);
